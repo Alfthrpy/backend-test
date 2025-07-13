@@ -187,3 +187,48 @@ All the following routes require an `Authorization` header with a bearer token.
     }
     ```
 -   **Error Response (404)**: If the employee is not found.
+
+### TEST SQL
+#### **Nilai RT**
+- **Method** : `GET`
+- **Endpoint** : `\nilaiRT` 
+- **Description** : Get nilai with materi_uji_id 7, excluding those in pelajaran_khusus
+-   **Success Response (200)**:
+    ```json
+    [
+    {
+        "nama": "Ahmad Fadlan",
+        "nisn": "3097012709",
+        "nilaiRT": {
+            "artistic": "2",
+            "conventional": "2",
+            "enterprising": "4",
+            "investigative": "2",
+            "realistic": "4",
+            "social": "2"
+        }
+    },
+    ]
+    ```
+
+
+#### **Nilai ST**
+- **Method** : `GET`
+- **Endpoint** : `\nilaiST` 
+- **Description** : Get nilai with materi_uji_id 4 with sum
+-   **Success Response (200)**:
+    ```json
+    [
+    {
+        "nama": "Muhammad Sanusi",
+        "nisn": "0094494403",
+        "listNilai": {
+            "figural": 142.86,
+            "kuantitatif": 89.01,
+            "penalaran": 200,
+            "verbal": 208.35
+        },
+        "total": 640.22
+    },
+    ]
+    ```
